@@ -33,7 +33,7 @@
 						"method": "POST",
 						"header": [
 							{
-								"key": "Content-Type",
+								"key": "Accept",
 								"value": "application/json"
 							}
 						],
@@ -47,7 +47,7 @@
 								},
 								{
 									"key": "password",
-									"value": "password",
+									"value": "123123mariam",
 									"type": "text"
 								}
 							]
@@ -75,8 +75,9 @@
 						"method": "POST",
 						"header": [
 							{
-								"key": "Content-Type",
-								"value": "application/json"
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
 							}
 						],
 						"body": {
@@ -132,7 +133,13 @@
 					"name": "Logout",
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{base_url}}/api/auth/logout",
 							"host": [
@@ -155,11 +162,14 @@
 				{
 					"name": "User Profile",
 					"request": {
-						"auth": {
-							"type": "noauth"
-						},
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{base_url}}/api/user",
 							"host": [
@@ -176,7 +186,7 @@
 				{
 					"name": "Update My Profile",
 					"request": {
-						"method": "PUT",
+						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
@@ -189,8 +199,7 @@
 								{
 									"key": "_method",
 									"value": "put",
-									"type": "text",
-									"disabled": true
+									"type": "text"
 								},
 								{
 									"key": "name",
@@ -205,7 +214,8 @@
 								{
 									"key": "password",
 									"value": "password",
-									"type": "text"
+									"type": "text",
+									"disabled": true
 								},
 								{
 									"key": "country_code",
