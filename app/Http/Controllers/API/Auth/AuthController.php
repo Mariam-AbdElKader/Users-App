@@ -15,7 +15,6 @@ class AuthController extends Controller
     {
         $user = User::create($request->validated());
 
-        Auth::login($user);
         $user->loginHistories()->create([
             'ip_address' => $request->ip(),
             'user_agent' => $request->userAgent(),
